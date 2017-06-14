@@ -89,7 +89,9 @@ body {
   margin-top: 2rem; }
 
 .wrapper {
-  padding-left: 5%; }
+  padding-left: 2%;
+  padding-right: 2%;
+  margin: auto; }
 
 .row {
   display: block;
@@ -266,3 +268,35 @@ body {
     padding-right: 4rem;
     -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
             clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); }
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 14px; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 8px; } }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 10px; } }
+
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+  html {
+    font-size: 13px; } }
+
+@media screen and (min-width: 1600px) and (max-width: 1899px) {
+  html {
+    font-size: 16px; } }
+
+@media screen and (min-width: 1900px) and (max-width: 2499px) {
+  html {
+    font-size: 20px; } }
+
+@media screen and (min-width: 2500px) and (max-width: 4999px) {
+  html {
+    font-size: 25px; } }
+
+@media screen and (min-width: 5000px) {
+  html {
+    font-size: 55px; } }
