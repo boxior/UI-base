@@ -1,0 +1,109 @@
+$black_l: #494949
+$black_m: #383737
+$black_d: #262626
+
+$green_l: #42c7b7
+$green_m: #24aa98
+$green_d: #1a9385
+
+$blue_l: #77bfe5
+$blue_m: #65abd0
+$blue_d: #5093b7
+
+$orange_l: #e8d48b
+$orange_m: #d9c26c
+$orange_d: #c9b248
+
+$red_l: #e79f91
+$red_m: #db7560
+$red_d: #c25842
+
+$grey_l: #dee2e7
+$grey_m: #c6ccd2
+$grey_d: #b4bbc2
+
+.color
+	display: inline-block
+	border-radius: 0.5rem
+	color: white
+	font-weight: 600
+	background: $black_m
+	overflow: hidden
+	font-size: 0
+	&__description
+		font-size: 1.4rem
+		padding: 2rem
+	&__hex
+		font-size: 1.6rem
+		color: #c0c0c0
+	&__shade
+		display: inline-block
+		width: 4.8rem
+		height: 4.8rem
+		&:nth-child(1)
+			background: $black_l
+		&:nth-child(2)
+			background: $black_m
+		&:nth-child(3)
+			background: $black_d
+
+	// green 
+	&--green &__shade//colors--green__shade
+		&:nth-child(1)
+			background: $green_l
+		&:nth-child(2)
+			background: $green_m
+		&:nth-child(3)
+			background: $green_d
+	
+	&--green &__description
+		color: $green_m
+
+		// blue
+	&--blue &__shade
+		&:nth-child(1)
+			background: $blue_l
+		&:nth-child(2)
+			background: $blue_m
+		&:nth-child(3) 
+			background: $blue_d
+
+	&--blue &__description 
+		color: $blue_m
+	
+
+	// orange
+	&--orange &__shade
+		&:nth-child(1)
+			background: $orange_l
+		&:nth-child(2)
+			background: $orange_m
+		&:nth-child(3)
+			background: $orange_d
+
+	&--orange &__description
+		color: $orange_m
+
+	// red
+	&--red &__shade
+		&:nth-child(1)
+			background: $red_l
+		&:nth-child(2)
+			background: $red_m
+		&:nth-child(3)
+			background: $red_d
+
+	&--red &__description
+		color: $red_m
+
+	// grey
+	&--grey &__shade
+		&:nth-child(1)
+			background: $grey_l
+		&:nth-child(2)
+			background: $grey_m
+		&:nth-child(3)
+			background: $grey_d
+
+	&--grey &__description
+		color: $grey_m
