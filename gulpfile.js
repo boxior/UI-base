@@ -8,11 +8,12 @@ var browserSync = require('browser-sync'),
     rename = require('gulp-rename'),
     pngquant = require('imagemin-pngquant'),
     sass = require('gulp-sass'),
-    rigger = require('gulp-rigger');
+    rigger = require('gulp-rigger'),
+    notify = require("gulp-notify");
 
 gulp.task('sass', function() {
   return gulp.src('app/sass/style.sass')
-  .pipe(sass())
+  .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
   .pipe(autoprefixer(['last 15 versions', '>1%', 'ie 8', 'ie 7'], {cascade: true}))
   .pipe(gulp.dest('app/css'))
   .pipe(browserSync.reload({stream: true}))
@@ -64,7 +65,7 @@ gulp.task('img', function() {
 
 gulp.task('watch', ['browser-sync'], function() {
   gulp.watch('app/sass/**/*.sass', ['sass']);
-  gulp.watch('dev/**/*.html', ['html'], browserSync.reload);
+  gulp.watch('dev/**/*.html', ['html']);
 });
 
 gulp.task('build', ['clean', 'img', 'sass'], function() {

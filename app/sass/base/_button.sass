@@ -1,7 +1,7 @@
 .button
 	display: inline-block
-	background: #65abd0
-	color: #ffffff
+	background: $btn_color
+	color: #fff
 	padding: 1.5rem 2.9rem
 	font-size: 1.6rem
 	font-weight: 600
@@ -17,7 +17,7 @@
 	cursor: pointer
 	transition: background, color .3s
 	&:hover 
-		background: darken(#65abd0, 5%)
+		background: darken($btn_color, 5%)
 	
 	&--large 
 		font-size: 1.8rem
@@ -34,11 +34,11 @@
 		border-radius: 3rem
 
 	&--inverse 
-		color: #65abd0
-		background: #ffffff
-		border-color: #65abd0
+		color: $btn_color
+		background: #fff
+		border-color: $btn_color
 		&:hover 
-			background-color: lighten(#65abd0, 20%)
+			background-color: lighten($btn_color, 20%)
 			color: #fff
 	&--square
 		width: 4.8rem
@@ -55,40 +55,42 @@
 		height: 4.8rem
 		border-radius: 50%
 		padding: 0
-		&_s
-			width: 3.6rem
-			height: 3.6rem
-			border-radius: 50%
-			padding: 0
-		&_l
-			width: 6rem
-			height: 6rem
-			border-radius: 50%
-			padding: 0
+
+	&--circle.button--large
+		width: 6rem
+		height: 6rem
+		border-radius: 50%
+		padding: 0
+
+	&--circle.button--small
+		width: 3.6rem
+		height: 3.6rem
+		border-radius: 50%
+		padding: 0
 	&--lr
 		width: 7.5rem
 		height: 3.6rem
 		padding: 0
 		border: 0
 		&:hover 
-			background: #65abd0
-		&_item
-			width: 50%
-			height: 100%
-			border: 0.2rem
-			padding: 0
-			margin: 0
-			float: left
-			background: inherit
-			&:first-child
-				border-right: 0.2rem solid darken(#65abd0, 5%)
-				border-radius: 0.5rem 0 0 0.5rem
-			&:last-child
-				border-left: 0.2rem solid darken(#65abd0, 5%)
-				border-radius: 0  0.5rem 0.5rem 0
-			&:hover
-				cursor: pointer
-				background: darken(#65abd0, 5%)
+			background: $btn_color
+	&--lr &--small
+		width: 50%
+		height: 100%
+		border: 0.2rem
+		padding: 0
+		margin: 0
+		float: left
+		background: inherit
+		&:first-child
+			border-right: 0.2rem solid darken($btn_color, 5%)
+			border-radius: 0.5rem 0 0 0.5rem
+		&:last-child
+			border-left: 0.2rem solid darken($btn_color, 5%)
+			border-radius: 0  0.5rem 0.5rem 0
+		&:hover
+			cursor: pointer
+			background: darken($btn_color, 5%)
 	&--wedge
 		padding-left: 2.5rem
 		padding-right: 4rem

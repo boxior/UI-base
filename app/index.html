@@ -17,7 +17,7 @@
 
         <main id="main" role="main">
             <div class="container">
-                <div class="sc sc--color">
+                <div class="sc">
                 
                   <div class="color color--green">
                     <span class="color__shade"></span>
@@ -86,13 +86,13 @@
                   </div>
                 
                 </div>
-                <div class="sc sc--button">
+                <div class="sc">
                   <div class="row">
                     <button type="button" class="button button--large">Learn More</button>
                     <button type="button" class="button button--large button--radius">Sign Up</button>
                     <button type="button" class="button button--large button--round">Sign Up</button>
                     <button type="button" class="button button--large button--round button--inverse">Logout</button>
-                    <button type="button" class="button button--circle_l">></button>
+                    <button type="button" class="button button--large button--circle">></button>
                   </div>
                   <div class="row">
                     <button type="button" class="button">Load More</button>
@@ -109,24 +109,63 @@
                     <button type="button" class="button button--small button--round">Sign Up</button>
                     <button type="button" class="button button--small button--round button--inverse">Free trial</button>
                     <button type="button" class="button button--small button--radius button--square_s">&#9776</button>
-                    <button type="button" class="button button--circle_s">></button>
+                    <button type="button" class="button button--small button--circle">></button>
                     <span class="button button--radius button--lr">
-                      <button type="button" class="button button--small button--lr_item"><</button>
-                      <button type="button" class="button button--small button--lr_item">></button>
+                      <button type="button" class="button button--small button--lr"><</button>
+                      <button type="button" class="button button--small button--lr">></button>
                     </span>
                     <button type="button" class="button button--small button--radius button--wedge">Forward</button>
                   </div>
                 </div>
-                <div class="sc sc--form">
-                	<span class="form form--align">
-                		<button class="form form--item"><img src="left_icon.svg" alt=""></button>
-                		<button class="form form--item">go</button>
-                		<button class="form form--item">go</button>
+                <div class="sc">
+                	<span class="form form__align">
+                		<button class="form form__align--item">
+                			<span class="form__align--span"></span>
+                			<span class="form__align--span"></span>
+                			<span class="form__align--span"></span>
+                		</button>
+                		<button class="form form__align--item">
+                			<span class="form__align--span"></span>
+                			<span class="form__align--span"></span>
+                			<span class="form__align--span"></span>
+                		</button>
+                		<button class="form form__align--item">
+                			<span class="form__align--span"></span>
+                			<span class="form__align--span"></span>
+                			<span class="form__align--span"></span>
+                		</button>
                 	</span>
-                	<form action="" class="form form--send">
-                		<input type="text" value="Hey there!" class="form form--send form--send_input">
-                		<button class="form orm--send form--send_buttom">Send</button>
+                
+                	<form action="/contact" method="post" accept-charset="utf-8" class="form form__send">
+                		<input type="text" value="Hey there!" class="form form__send form__send--input">
+                		<button class="form form__send form__send--button">Send</button>
                 	</form>
+                
+                	<form action="/contact" method="post" accept-charset="utf-8" class="form">
+                		<select name="To" id="" class=" form form__select">
+                			<option value="To seller" class="form__option">To seller</option>
+                			<option value="To director" class="form__option">To director</option>
+                			<option value="To manager" class="form__option">To manager</option>
+                		</select>
+                		<input type="text" placeholder="Message" class="form form__send form__send--input form__select--input">
+                		<button class="form form__send form__send--button form__select--button">Send</button>
+                	</form>
+                	<select name="Ok" id="" class=" form form__select">
+                		<option value="Ok" class="form__option">Ok</option>
+                		<option value="No" class="form__option">No</option>
+                		<option value="Maybe" class="form__option">Maybe</option>
+                	</select>
+                </div>
+                <div class="sc sc--input">
+                	<input type="text" placeholder="E-mail" class="input">
+                	<input type="text" value="hello" class="input input--blue">
+                	<input type="text" placeholder="Search" class="input input--round input--search">
+                	<input type="text" value="UI Kit" class="input input--round input--search input--blue">
+                	<select name="Ok" id="" class=" input input--success">
+                		<option value="hello@creativeda.sh" class="form__option">hello@creativeda.sh</option>
+                		<option value="by" class="form__option">by@creativeda.sh</option>
+                		<option value="why" class="form__option">why@creativeda.sh</option>
+                	</select>
                 </div>
             </div>
         </main>

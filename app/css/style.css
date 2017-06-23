@@ -10,14 +10,15 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button, input, select {
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   vertical-align: baseline;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  outline: none; }
 
 html {
   line-height: 1; }
@@ -52,17 +53,18 @@ img {
 a {
   text-decoration: none; }
 
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary, input, select {
   display: block;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  focus-outline: none; }
+          box-sizing: border-box; }
+  article:focus, aside:focus, details:focus, figcaption:focus, figure:focus, footer:focus, header:focus, main:focus, menu:focus, nav:focus, section:focus, summary:focus, input:focus, select:focus {
+    outline: none; }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
 html {
-  font-size: 20px; }
+  font-size: 10px; }
 
 body {
   font-size: 1.5rem;
@@ -166,7 +168,7 @@ body {
 .button {
   display: inline-block;
   background: #65abd0;
-  color: #ffffff;
+  color: #fff;
   padding: 1.5rem 2.9rem;
   font-size: 1.6rem;
   font-weight: 600;
@@ -205,7 +207,7 @@ body {
             border-radius: 3rem; }
   .button--inverse {
     color: #65abd0;
-    background: #ffffff;
+    background: #fff;
     border-color: #65abd0; }
     .button--inverse:hover {
       background-color: #b3d6e8;
@@ -224,18 +226,18 @@ body {
     -webkit-border-radius: 50%;
             border-radius: 50%;
     padding: 0; }
-    .button--circle_s {
-      width: 3.6rem;
-      height: 3.6rem;
-      -webkit-border-radius: 50%;
-              border-radius: 50%;
-      padding: 0; }
-    .button--circle_l {
-      width: 6rem;
-      height: 6rem;
-      -webkit-border-radius: 50%;
-              border-radius: 50%;
-      padding: 0; }
+  .button--circle.button--large {
+    width: 6rem;
+    height: 6rem;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    padding: 0; }
+  .button--circle.button--small {
+    width: 3.6rem;
+    height: 3.6rem;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    padding: 0; }
   .button--lr {
     width: 7.5rem;
     height: 3.6rem;
@@ -243,25 +245,25 @@ body {
     border: 0; }
     .button--lr:hover {
       background: #65abd0; }
-    .button--lr_item {
-      width: 50%;
-      height: 100%;
-      border: 0.2rem;
-      padding: 0;
-      margin: 0;
-      float: left;
-      background: inherit; }
-      .button--lr_item:first-child {
-        border-right: 0.2rem solid #51a0ca;
-        -webkit-border-radius: 0.5rem 0 0 0.5rem;
-                border-radius: 0.5rem 0 0 0.5rem; }
-      .button--lr_item:last-child {
-        border-left: 0.2rem solid #51a0ca;
-        -webkit-border-radius: 0  0.5rem 0.5rem 0;
-                border-radius: 0  0.5rem 0.5rem 0; }
-      .button--lr_item:hover {
-        cursor: pointer;
-        background: #51a0ca; }
+  .button--lr .button--small {
+    width: 50%;
+    height: 100%;
+    border: 0.2rem;
+    padding: 0;
+    margin: 0;
+    float: left;
+    background: inherit; }
+    .button--lr .button--small:first-child {
+      border-right: 0.2rem solid #51a0ca;
+      -webkit-border-radius: 0.5rem 0 0 0.5rem;
+              border-radius: 0.5rem 0 0 0.5rem; }
+    .button--lr .button--small:last-child {
+      border-left: 0.2rem solid #51a0ca;
+      -webkit-border-radius: 0  0.5rem 0.5rem 0;
+              border-radius: 0  0.5rem 0.5rem 0; }
+    .button--lr .button--small:hover {
+      cursor: pointer;
+      background: #51a0ca; }
   .button--wedge {
     padding-left: 2.5rem;
     padding-right: 4rem;
@@ -272,7 +274,7 @@ body {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  color: white;
+  color: #fff;
   background: #24aa98;
   padding: 0;
   font-size: 1.6rem;
@@ -295,40 +297,153 @@ body {
   border: 0.2rem;
   -webkit-border-radius: 0.5rem;
           border-radius: 0.5rem; }
-  .form--item {
+  .form__align--item {
     width: 4.8rem;
     height: 4.8rem;
     padding: 0;
     margin: 0;
-    float: left; }
-    .form--item:hover {
+    float: left;
+    text-align: -webkit-center; }
+    .form__align--item:hover {
       background: #209585; }
-    .form--item:nth-child(1) {
+    .form__align--item:nth-child(1) {
       -webkit-border-radius: 0.5rem 0 0 0.5rem;
               border-radius: 0.5rem 0 0 0.5rem; }
-    .form--item:nth-child(2) {
+      .form__align--item:nth-child(1) .form__align--span:first-child {
+        width: 1.3rem;
+        margin-left: -0.4rem; }
+      .form__align--item:nth-child(1) .form__align--span:last-child {
+        width: 0.8rem;
+        margin-left: -0.9rem; }
+    .form__align--item:nth-child(2) {
       border-left: 0.2rem solid #209585;
       border-right: 0.2rem solid #209585;
       -webkit-border-radius: 0;
               border-radius: 0; }
-    .form--item:nth-child(3) {
+      .form__align--item:nth-child(2) .form__align--span:first-child {
+        width: 1.3rem; }
+      .form__align--item:nth-child(2) .form__align--span:last-child {
+        width: 0.9rem; }
+    .form__align--item:nth-child(3) {
       -webkit-border-radius: 0 0.5rem 0.5rem 0;
               border-radius: 0 0.5rem 0.5rem 0; }
-    .form--item img {
-      width: 2rem;
-      height: 2rem; }
-  .form--send {
-    background: transparent;
-    border: 0; }
-    .form--send_input {
-      line-height: 4.8rem;
-      background: inherit;
-      border: 0; }
+      .form__align--item:nth-child(3) .form__align--span:first-child {
+        width: 1.3rem;
+        margin-right: -0.4rem; }
+      .form__align--item:nth-child(3) .form__align--span:last-child {
+        width: 0.8rem;
+        margin-right: -0.9rem; }
+  .form__align--span {
+    display: block;
+    width: 1.7rem;
+    height: 0.2rem;
+    margin-bottom: 0.3rem;
+    background: #fff; }
+    .form__align--span:last-child {
+      margin-bottom: 0; }
+  .form__send {
+    height: 4.8rem; }
+    .form__send--input {
+      background: #fff;
+      border: 0.2rem solid #c6ccd2;
+      border-right: 0;
+      -webkit-border-radius: 0.5rem 0 0 0.5rem;
+              border-radius: 0.5rem 0 0 0.5rem;
+      text-align: left;
+      padding: 0 1rem;
+      color: #383737; }
+    .form__send--button {
+      -webkit-border-radius: 0 0.5rem 0.5rem 0;
+              border-radius: 0 0.5rem 0.5rem 0;
+      padding: 0 2rem; }
+      .form__send--button:hover {
+        background: #209585; }
+  .form__select {
+    height: 4.8rem;
+    padding: 0 2rem;
+    -webkit-border-radius: 0.5rem;
+            border-radius: 0.5rem;
+    -webkit-appearance: none;
+    background: #24aa98 url("../../img/down.svg") no-repeat 96% center;
+    -webkit-background-size: 1rem 1rem;
+            background-size: 1rem;
+    text-indent: 0.01px;
+    -o-text-overflow: '';
+       text-overflow: '';
+    -ms-expand-display: none; }
+    .form__select:hover {
+      background: #209585 url("../../img/down.svg") no-repeat 96%;
+      background-position-y: 60%;
+      -webkit-background-size: 1.2rem 1.2rem;
+              background-size: 1.2rem; }
+    .form__select--input {
+      float: none;
+      border-left: 0;
+      -webkit-border-radius: 0;
+              border-radius: 0; }
 
-@media screen and (max-width: 767px) {
+.input {
+  display: inline-block;
+  background: transparent;
+  color: black;
+  padding: 1.5rem 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-image: none;
+  border: .2rem solid #c6ccd2;
+  -webkit-border-radius: .5rem;
+          border-radius: .5rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  -webkit-transition: background, color .3s;
+  -o-transition: background, color .3s;
+  transition: background, color .3s; }
+  .input:hover {
+    background: #f2f2f2; }
+  .input--small {
+    font-size: 1.4rem;
+    padding: 1rem 2.35rem; }
+  .input--round {
+    -webkit-border-radius: 3rem;
+            border-radius: 3rem; }
+  .input--blue {
+    border-color: #65abd0; }
+  .input--search {
+    padding-left: 5rem;
+    background: url("../../img/search.svg") no-repeat 2rem center;
+    -webkit-background-size: 2rem 2rem;
+            background-size: 2rem; }
+    .input--search:hover {
+      background: url("../../img/search.svg") no-repeat 2rem center;
+      -webkit-background-size: 2rem 2rem;
+              background-size: 2rem; }
+  .input--success {
+    padding-right: 5rem;
+    border-color: #24aa98;
+    background: url("../../img/check.svg") no-repeat 96% center;
+    -webkit-background-size: 2rem 2rem;
+            background-size: 2rem; }
+    .input--success:hover {
+      background: url("../../img/check.svg") no-repeat 96% center;
+      -webkit-background-size: 2rem 2rem;
+              background-size: 2rem;
+      background-position-y: 60%; }
+
+@media screen and (max-width: 768px) {
   html {
     font-size: 14px; } }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   html {
     font-size: 1vw; } }
